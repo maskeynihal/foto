@@ -1,0 +1,29 @@
+{
+  "name": "foto",
+  "version": "1.0.0",
+  "description": "Opensource photo collection in one spot",
+  "main": "index.ts",
+  "scripts": {
+    "dev": "tsc -w & nodemon ./build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "maskeynihal",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/dotenv": "^8.2.0",
+    "@types/morgan": "^1.9.0",
+    "@typescript-eslint/eslint-plugin": "^2.34.0",
+    "@typescript-eslint/parser": "^2.34.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "nodemon": "^2.0.4",
+    "tslint": "^6.1.2",
+    "typescript": "^3.9.2"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
+  }
+}
