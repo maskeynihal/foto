@@ -10,8 +10,11 @@
   "author": "maskeynihal",
   "license": "ISC",
   "devDependencies": {
+    "@types/axios": "^0.14.0",
     "@types/dotenv": "^8.2.0",
     "@types/morgan": "^1.9.0",
+    "@types/node-fetch": "^2.5.7",
+    "@types/unsplash-js": "^6.0.1",
     "@typescript-eslint/eslint-plugin": "^2.34.0",
     "@typescript-eslint/parser": "^2.34.0",
     "eslint": "^6.8.0",
@@ -22,8 +25,12 @@
     "typescript": "^3.9.2"
   },
   "dependencies": {
+    "axios": "^0.19.2",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "node-fetch": "^2.6.0",
+    "pexels": "^1.0.1",
+    "unsplash-js": "^6.0.0"
   }
 }

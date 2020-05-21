@@ -2,6 +2,12 @@
 import express, { Request, Response } from 'express';
 import morgan from 'morgan';
 import dotenv from 'dotenv';
+import fetch from 'node-fetch';
+import routes from './routes/api';
+
+const globalAny: any = global;
+
+globalAny.fetch = fetch;
 
 dotenv.config();
 
@@ -12,9 +18,4 @@ app.use(morgan('tiny'));
 
 app.listen(port, () => console.log(`Server Started on ${port}`));
 
-app.get('/', (req: Request, res: Response) => {
-	res.status(200).json({
-		data: null,
-		message: 'Hello World',
-	});
-});
+app.use('/', routes);

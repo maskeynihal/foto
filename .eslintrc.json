@@ -21,6 +21,34 @@
     "rules": {
 		"indent": ["error", "tab"],
 		"no-tabs": "off",
-		"no-console": "off"
-    }
+		"no-console": "off",
+		"import/prefer-default-export": "off",
+		"import/extensions": [
+			"error",
+			"ignorePackages",
+			{
+				"js": "never",
+				"jsx": "never",
+				"ts": "never",
+				"tsx": "never"
+			}
+		],
+		"camelcase": "off"
+	},
+	"settings": {
+		"import/resolver": {
+			"node": {
+				"paths": [
+					"src"
+				],
+				"extensions": [
+					".js",
+					".jsx",
+					".ts",
+					".tsx"
+				]
+			}
+		}
+	}
+
 }
