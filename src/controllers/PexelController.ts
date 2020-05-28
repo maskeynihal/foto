@@ -1,11 +1,12 @@
-import { Response, Request } from 'express';
+import { Response, Request, response } from 'express';
 import pexelServices from '../services/pexel/PexelServices';
+import PexelCollection from '../resources/PexelCollection';
 
 class PexelController {
 	public search = async (req: Request, res: Response) => {
 		const photos = await pexelServices.search('Dog', 1);
 		res.status(200).json({
-			data: photos,
+			data: PexelCollection.collection(photos),
 			message: 'Search Result of Dog',
 		});
 	}
@@ -16,6 +17,14 @@ class PexelController {
 		res.status(200).json({
 			data: photos,
 			message: 'next Page',
+		});
+	}
+
+	public random = async (req: Request, res: Response) => {
+		const photo = await pexelServices.random();
+		res.status(200).json({
+			data: photo,
+			message: 'Real-time photos curated by the Pexels team.',
 		});
 	}
 }

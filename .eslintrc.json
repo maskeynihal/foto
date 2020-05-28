@@ -33,7 +33,8 @@
 				"tsx": "never"
 			}
 		],
-		"camelcase": "off"
+		"camelcase": "off",
+		"max-len": "off"
 	},
 	"settings": {
 		"import/resolver": {

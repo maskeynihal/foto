@@ -3,7 +3,9 @@ import client, { axiosClient } from './auth';
 class PexelServices {
 	public search = async (query: string, per_page: number = 10) => {
 		console.log(query);
-		const photos = await client.photos.search({ query, per_page });
+		const photos: any = await client.photos.search({ query, per_page });
+		photos.keyword = query;
+		// photos.page = 1;
 		console.log(photos);
 		return photos;
 	}
@@ -12,6 +14,12 @@ class PexelServices {
 		const photos = await axiosClient.get(nextPage);
 		console.log(photos.data);
 		return photos.data;
+	}
+
+	public random = async () => {
+		const photo = await client.photos.curated({ per_page: 1 });
+		console.log(photo);
+		return photo;
 	}
 }
 
